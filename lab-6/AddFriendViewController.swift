@@ -51,15 +51,15 @@ class AddFriendViewController: UIViewController {
         if Email.text?.isEmpty == true {
             errorMessage += "Email is required.\n"
         }
+        
 
         if !errorMessage.isEmpty {
             let errorAlert = UIAlertController(title: "Please Enter below field", message: errorMessage, preferredStyle: .alert)
             errorAlert.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(errorAlert, animated: true)
         } else {
-//            self.addItemInDataList(FirstName: Name.text!, Phone: Phone.text!, Email: Email.text!)
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "FriendViewController") as! FriendViewController
-            vc.data.insert(FriendViewController.Datalist(FirstName: Name.text!, Phone: Phone.text!, Email: Email.text!, CityImage: "img2", SportImage: "img1", FoodImage: "img3"), at: 0)
+            vc.data.insert(FriendViewController.Datalist(FirstName: Name.text!, Phone:"+1\(Phone.text!)" , Email:"\(Email.text!)", CityImage: "img2", SportImage: "img1", FoodImage: "img3"), at: 0)
             
             self.navigationController?.pushViewController(vc, animated: true)
         }

@@ -21,6 +21,8 @@
 		05CCAFEF2C387B7800F63E8A /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CCAFEE2C387B7800F63E8A /* CarTableViewCell.swift */; };
 		05CCAFF12C387D9300F63E8A /* CarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CCAFF02C387D9300F63E8A /* CarViewController.swift */; };
 		05EE47782C39F35300B118D1 /* AddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EE47772C39F35300B118D1 /* AddFriendViewController.swift */; };
+		05EE477A2C3A13F500B118D1 /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EE47792C3A13F500B118D1 /* TodoTableViewCell.swift */; };
+		05EE477C2C3A14A200B118D1 /* TodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EE477B2C3A14A200B118D1 /* TodoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		05CCAFEE2C387B7800F63E8A /* CarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
 		05CCAFF02C387D9300F63E8A /* CarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarViewController.swift; sourceTree = "<group>"; };
 		05EE47772C39F35300B118D1 /* AddFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendViewController.swift; sourceTree = "<group>"; };
+		05EE47792C3A13F500B118D1 /* TodoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
+		05EE477B2C3A14A200B118D1 /* TodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,10 +118,12 @@
 				05CCAFC22C386D5700F63E8A /* ViewController.swift */,
 				05CCAFF02C387D9300F63E8A /* CarViewController.swift */,
 				05CCAFC42C386D5700F63E8A /* Main.storyboard */,
+				05EE477B2C3A14A200B118D1 /* TodoViewController.swift */,
 				05EE47772C39F35300B118D1 /* AddFriendViewController.swift */,
 				05AD7DDE2C38BE3E0076277F /* FriendViewController.swift */,
 				05AD7DDC2C38BCC20076277F /* FriendTableViewCell.swift */,
 				05CCAFEE2C387B7800F63E8A /* CarTableViewCell.swift */,
+				05EE47792C3A13F500B118D1 /* TodoTableViewCell.swift */,
 				05CCAFC72C386D5800F63E8A /* Assets.xcassets */,
 				05CCAFC92C386D5800F63E8A /* LaunchScreen.storyboard */,
 				05CCAFCC2C386D5800F63E8A /* Info.plist */,
@@ -273,9 +279,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05EE477C2C3A14A200B118D1 /* TodoViewController.swift in Sources */,
 				05EE47782C39F35300B118D1 /* AddFriendViewController.swift in Sources */,
 				05CCAFF12C387D9300F63E8A /* CarViewController.swift in Sources */,
 				05CCAFC32C386D5700F63E8A /* ViewController.swift in Sources */,
+				05EE477A2C3A13F500B118D1 /* TodoTableViewCell.swift in Sources */,
 				05CCAFBF2C386D5700F63E8A /* AppDelegate.swift in Sources */,
 				05AD7DDF2C38BE3E0076277F /* FriendViewController.swift in Sources */,
 				05AD7DDD2C38BCC20076277F /* FriendTableViewCell.swift in Sources */,

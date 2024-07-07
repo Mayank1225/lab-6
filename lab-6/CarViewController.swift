@@ -21,13 +21,15 @@ class CarViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
 
     var data: [Datalist] = [
-        Datalist(Name: "Dell", ImgName: "img1", detail: "RAM 4GB"),
-        Datalist(Name: "Hp", ImgName: "img2", detail: "RAM 8GB"),
-        Datalist(Name: "Lenovo", ImgName: "img3", detail: "RAM 8GB"),
-        Datalist(Name: "Asus", ImgName: "img4", detail: "RAM 8GB"),
-        Datalist(Name: "Rog", ImgName: "img5", detail: "RAM 16GB"),
-        Datalist(Name: "Acer", ImgName: "img1", detail: "RAM 16GB"),
-        Datalist(Name: "Lenovo", ImgName: "img3", detail: "RAM 8"),]
+        Datalist(Name: "Toyota", ImgName: "img1", detail: "Camry, Sedan"),
+        Datalist(Name: "Ford", ImgName: "img2", detail: "Mustang, Sports Car"),
+        Datalist(Name: "Honda", ImgName: "img3", detail: "Civic, Sedan"),
+        Datalist(Name: "Audi", ImgName: "img4", detail: "A4, Sedan"),
+        Datalist(Name: "BMW", ImgName: "img5", detail: "X5, SUV"),
+        Datalist(Name: "Tesla", ImgName: "img1", detail: "Model S, Electric Sedan"),
+        Datalist(Name: "Chevrolet", ImgName: "img3", detail: "Silverado, Pickup Truck"),
+        Datalist(Name: "Mercedes-Benz", ImgName: "img3", detail: "GLE, SUV")
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,10 +104,7 @@ class CarViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             table.reloadData()
     }
     
-//        @objc func Close(_ sender: Any) {
-//                navigationController?.popToRootViewController(animated: true)
-//            
-//        }
+
     
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
