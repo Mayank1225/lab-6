@@ -50,7 +50,7 @@ class CarViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     
     @IBAction func onAdd(_ sender: Any) {
-        let alertController = UIAlertController(title: "Input", message: "Please Enter your ID", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Enter details", message: "Please Enter Car details", preferredStyle: .alert)
 
         alertController.addTextField { textField in
             textField.placeholder = "Enter car name here"

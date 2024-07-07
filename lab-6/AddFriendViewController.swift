@@ -39,6 +39,30 @@ class AddFriendViewController: UIViewController {
 //        addTextInView()
     }
     
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+            if string.isEmpty {
+                return true
+            }
+
+            if let currentText = textField.text,
+               let rangeOfTextToReplace = Range(range, in: currentText),
+               let number = Int(string),
+               number >= 1, number <= 8,
+               currentText.replacingCharacters(in: rangeOfTextToReplace, with: string).count <= 1 {
+                return true
+            }
+            
+//            showAlert(message: "Please enter a single digit between 1 and 8")
+            return false
+        }
+    
+    func isValidSingleDigit(_ text: String?) -> Bool {
+            guard let text = text, let number = Int(text), number >= 1, number <= 8, text.count == 1 else {
+                return false
+            }
+            return true
+        }
+    
     @IBAction func AddBtn(_ sender: Any) {
         var errorMessage = ""
 
@@ -51,6 +75,15 @@ class AddFriendViewController: UIViewController {
         if Email.text?.isEmpty == true {
             errorMessage += "Email is required.\n"
         }
+        if !isValidSingleDigit(Food.text) {
+                  errorMessage += "Food must be a single digit between 1 and 8.\n"
+              }
+              if !isValidSingleDigit(city.text) {
+                  errorMessage += "City must be a single digit between 1 and 8.\n"
+              }
+              if !isValidSingleDigit(Sport.text) {
+                  errorMessage += "Sport must be a single digit between 1 and 8.\n"
+              }
         
 
         if !errorMessage.isEmpty {
@@ -59,7 +92,7 @@ class AddFriendViewController: UIViewController {
             self.present(errorAlert, animated: true)
         } else {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "FriendViewController") as! FriendViewController
-            vc.data.insert(FriendViewController.Datalist(FirstName: Name.text!, Phone:"+1\(Phone.text!)" , Email:"\(Email.text!)", CityImage: "img2", SportImage: "img1", FoodImage: "img3"), at: 0)
+            vc.data.insert(FriendViewController.Datalist(FirstName: Name.text!, Phone:"+1\(Phone.text!)" , Email:"\(Email.text!)", CityImage: "city\(city.text!)", SportImage: "sp\(Sport.text!)", FoodImage: "food\(Food.text!)"), at: 0)
             
             self.navigationController?.pushViewController(vc, animated: true)
         }
@@ -74,5 +107,8 @@ class AddFriendViewController: UIViewController {
         Name.text = "";
         Phone.text = "";
         Email.text = "";
+        Food.text = "";
+        city.text = "";
+        Sport.text = "";
     }
 }

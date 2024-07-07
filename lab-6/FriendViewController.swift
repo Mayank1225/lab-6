@@ -18,7 +18,7 @@ class FriendViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
         let switchControl = UISwitch()
                 switchControl.addTarget(self, action: #selector(switchChanged), for: .valueChanged)
-                switchControl.onTintColor = .blue
+        switchControl.onTintColor = .systemBlue
                 let switchBarItem = UIBarButtonItem(customView: switchControl)
                 self.navigationItem.leftBarButtonItem = switchBarItem
         
