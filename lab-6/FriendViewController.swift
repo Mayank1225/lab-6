@@ -7,6 +7,27 @@
 
 import UIKit
 
+struct Datalist {
+    let FirstName: String
+    let Phone: String
+    let Email: String
+    let CityImage: String
+    let SportImage: String
+    let FoodImage: String
+}
+
+var data: [Datalist] = [
+    Datalist(FirstName: "John Doe", Phone: "+13845663389", Email: "john@gmail.com", CityImage: "city1", SportImage: "sp1", FoodImage: "food1"),
+    Datalist(FirstName: "Jane Smith", Phone: "+13845663400", Email: "jane@gmail.com", CityImage: "city2", SportImage: "sp2", FoodImage: "food2"),
+    Datalist(FirstName: "Michael Brown", Phone: "+13845663401", Email: "michael@gmail.com", CityImage: "city3", SportImage: "sp3", FoodImage: "food3"),
+    Datalist(FirstName: "Emily Davis", Phone: "+13845663402", Email: "emily@gmail.com", CityImage: "city4", SportImage: "sp4", FoodImage: "food4"),
+    Datalist(FirstName: "Chris Wilson", Phone: "+13845663403", Email: "chris@gmail.com", CityImage: "city5", SportImage: "sp5", FoodImage: "food5"),
+    Datalist(FirstName: "Jessica Taylor", Phone: "+13845663404", Email: "jessica@gmail.com", CityImage: "city6", SportImage: "sp6", FoodImage: "food6"),
+    Datalist(FirstName: "David Moore", Phone: "+13845663405", Email: "david@gmail.com", CityImage: "city7", SportImage: "sp7", FoodImage: "food7"),
+    Datalist(FirstName: "Laura White", Phone: "+13845663406", Email: "laura@gmail.com", CityImage: "city8", SportImage: "sp8", FoodImage: "food8")
+]
+
+
 class FriendViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var table: UITableView!
@@ -21,11 +42,6 @@ class FriendViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 let switchBarItem = UIBarButtonItem(customView: switchControl)
                 self.navigationItem.leftBarButtonItem = switchBarItem
         
-        guard table != nil else {
-                  print("Error: table outlet is not connected.")
-                  return
-              }
-        
         table.dataSource = self
         table.delegate = self
     }
@@ -37,26 +53,7 @@ class FriendViewController: UIViewController, UITableViewDelegate, UITableViewDa
                table.isEditing = false
            }
        }
-        
-    struct Datalist {
-        let FirstName: String
-        let Phone: String
-        let Email: String
-        let CityImage: String
-        let SportImage: String
-        let FoodImage: String
-    }
-    var data: [Datalist] = [
-        Datalist(FirstName: "John Doe", Phone: "+13845663389", Email: "john@gmail.com", CityImage: "city1", SportImage: "sp1", FoodImage: "food1"),
-        Datalist(FirstName: "Jane Smith", Phone: "+13845663400", Email: "jane@gmail.com", CityImage: "city2", SportImage: "sp2", FoodImage: "food2"),
-        Datalist(FirstName: "Michael Brown", Phone: "+13845663401", Email: "michael@gmail.com", CityImage: "city3", SportImage: "sp3", FoodImage: "food3"),
-        Datalist(FirstName: "Emily Davis", Phone: "+13845663402", Email: "emily@gmail.com", CityImage: "city4", SportImage: "sp4", FoodImage: "food4"),
-        Datalist(FirstName: "Chris Wilson", Phone: "+13845663403", Email: "chris@gmail.com", CityImage: "city5", SportImage: "sp5", FoodImage: "food5"),
-        Datalist(FirstName: "Jessica Taylor", Phone: "+13845663404", Email: "jessica@gmail.com", CityImage: "city6", SportImage: "sp6", FoodImage: "food6"),
-        Datalist(FirstName: "David Moore", Phone: "+13845663405", Email: "david@gmail.com", CityImage: "city7", SportImage: "sp7", FoodImage: "food7"),
-        Datalist(FirstName: "Laura White", Phone: "+13845663406", Email: "laura@gmail.com", CityImage: "city8", SportImage: "sp8", FoodImage: "food8")
-    ]
-    
+            
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count

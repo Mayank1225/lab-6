@@ -198,14 +198,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ToDoCell" id="p9m-EV-Ulr" customClass="TodoTableViewCell" customModule="lab_6" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="430" height="29"/>
+                                        <rect key="frame" x="0.0" y="50" width="430" height="29.333333969116211"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="p9m-EV-Ulr" id="8Gl-gK-K6L">
-                                            <rect key="frame" x="0.0" y="0.0" width="430" height="29"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="430" height="29.333333969116211"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jql-48-jrl">
-                                                    <rect key="frame" x="150" y="0.0" width="250" height="29"/>
+                                                    <rect key="frame" x="150" y="0.0" width="250" height="29.333333333333332"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -439,7 +439,7 @@
                                             <constraint firstAttribute="height" constant="50" id="fQi-xM-8YA"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
                                 </subviews>
                             </stackView>
