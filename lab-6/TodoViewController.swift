@@ -55,7 +55,25 @@ class TodoViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @IBAction func addBtn(_ sender: Any) {
-       
+        let sectionText = section.text ?? ""
+          let todoText = todo.text ?? ""
+
+          var errorMessage = ""
+
+          if sectionText.isEmpty {
+              errorMessage += "Section is required.\n"
+          }
+          if todoText.isEmpty {
+              errorMessage += "Todo item is required.\n"
+          }
+
+          if !errorMessage.isEmpty {
+              let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
+              alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+              present(alert, animated: true, completion: nil)
+              return
+          }
+        
         if let sectionIndex = sections.firstIndex(where: { $0.title == section.text! }) {
             sections[sectionIndex].items.append(todo.text!)
                    table.reloadSections(IndexSet(integer: sectionIndex), with: .automatic)

@@ -27,18 +27,6 @@ class AddFriendViewController: UIViewController {
     }
  
     
-    @IBAction func onNameChange(_ sender: Any) {
-//        addTextInView()
-    }
-    
-    @IBAction func OnPhoneChange(_ sender: Any) {
-//        addTextInView()
-    }
-    
-    @IBAction func OnEmailChange(_ sender: Any) {
-//        addTextInView()
-    }
-    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
             if string.isEmpty {
                 return true
@@ -52,7 +40,6 @@ class AddFriendViewController: UIViewController {
                 return true
             }
             
-//            showAlert(message: "Please enter a single digit between 1 and 8")
             return false
         }
     
@@ -93,6 +80,7 @@ class AddFriendViewController: UIViewController {
         } else {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "FriendViewController") as! FriendViewController
             vc.data.insert(FriendViewController.Datalist(FirstName: Name.text!, Phone:"+1\(Phone.text!)" , Email:"\(Email.text!)", CityImage: "city\(city.text!)", SportImage: "sp\(Sport.text!)", FoodImage: "food\(Food.text!)"), at: 0)
+           
             
             self.navigationController?.pushViewController(vc, animated: true)
         }

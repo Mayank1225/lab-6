@@ -12,7 +12,6 @@ class FriendViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var table: UITableView!
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -57,6 +56,7 @@ class FriendViewController: UIViewController, UITableViewDelegate, UITableViewDa
         Datalist(FirstName: "David Moore", Phone: "+13845663405", Email: "david@gmail.com", CityImage: "city7", SportImage: "sp7", FoodImage: "food7"),
         Datalist(FirstName: "Laura White", Phone: "+13845663406", Email: "laura@gmail.com", CityImage: "city8", SportImage: "sp8", FoodImage: "food8")
     ]
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count

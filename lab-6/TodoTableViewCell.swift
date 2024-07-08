@@ -9,7 +9,5 @@ import UIKit
 
 class TodoTableViewCell: UITableViewCell {
 
- 
-
     @IBOutlet weak var todoItem: UILabel!
 }

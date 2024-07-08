@@ -198,14 +198,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ToDoCell" id="p9m-EV-Ulr" customClass="TodoTableViewCell" customModule="lab_6" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="430" height="29.666666030883789"/>
+                                        <rect key="frame" x="0.0" y="50" width="430" height="29"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="p9m-EV-Ulr" id="8Gl-gK-K6L">
-                                            <rect key="frame" x="0.0" y="0.0" width="430" height="29.666666030883789"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="430" height="29"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jql-48-jrl">
-                                                    <rect key="frame" x="150" y="0.0" width="250" height="29.666666666666668"/>
+                                                    <rect key="frame" x="150" y="0.0" width="250" height="29"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -389,16 +389,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XWA-rd-pgK">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XWA-rd-pgK">
                                         <rect key="frame" x="100" y="0.0" width="290" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="iu9-BC-IQy"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="onNameChange:" destination="Qay-Z9-cA1" eventType="editingDidEnd" id="mkG-iX-n4n"/>
-                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -414,16 +411,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Sp-bm-VOP">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Sp-bm-VOP">
                                         <rect key="frame" x="100" y="0.0" width="290" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="iyI-Gr-S6f"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="OnPhoneChange:" destination="Qay-Z9-cA1" eventType="editingDidEnd" id="8dj-K1-E9y"/>
-                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -439,16 +433,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VKy-dF-DJx">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VKy-dF-DJx">
                                         <rect key="frame" x="100" y="0.0" width="290" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="fQi-xM-8YA"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="OnEmailChange:" destination="Qay-Z9-cA1" eventType="editingDidEnd" id="wkB-BL-nwO"/>
-                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -464,7 +455,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bLI-V9-X13">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter number between 1-8" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bLI-V9-X13">
                                         <rect key="frame" x="100" y="0.0" width="290" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="3M9-nh-8fS"/>
@@ -486,7 +477,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aOD-Dt-w3U">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter number between 1-8" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aOD-Dt-w3U">
                                         <rect key="frame" x="100" y="0.0" width="290" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="AkC-I6-9is"/>
@@ -508,7 +499,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7EJ-ia-F66">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter number between 1-8" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7EJ-ia-F66">
                                         <rect key="frame" x="100" y="0.0" width="290" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="GkW-7A-gbw"/>
