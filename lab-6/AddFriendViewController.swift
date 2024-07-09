@@ -80,7 +80,6 @@ class AddFriendViewController: UIViewController {
         } else {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "FriendViewController") as! FriendViewController
             data.insert(Datalist(FirstName: Name.text!, Phone:"+1\(Phone.text!)" , Email:"\(Email.text!)", CityImage: "city\(city.text!)", SportImage: "sp\(Sport.text!)", FoodImage: "food\(Food.text!)"), at: 0)
-           
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
